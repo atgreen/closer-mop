@@ -78,3 +78,14 @@ Note that in some cases, symbols from the underlying MOP implementation or even 
 If symbols from the underlying MOP implementation or the COMMON-LISP package are shadowed in Closer to MOP, if they are names for metaobject classes, they are supposed to be used primarily for subclassing. If in rare cases you want to refer to them directly, please be advised that you may need to make fine-grained distinctions between the original symbols and the shadowed symbols, depending on context. The restrictions in the CLOS MOP specification do not allow for a more convenient solution.
 
 For details on what has or has not been fixed, see the accompanying file features.txt. Please also check the comments that come with the source code.
+
+## EGCL port
+
+This fork follows https://codeberg.org/pcostanza/closer-mop. Its EGCL
+adapter exposes the existing slot inspection functions and
+`set-funcallable-instance-function`, including the callable class designator
+used by cl-iparse. EGCL accepts class designators; it does not yet provide the
+complete metaobject protocol. Unimplemented protocol functions remain unavailable.
+
+Run `tests/egcl.lisp` after loading the system to check inherited slot inspection
+and callable instances. The same checks run on SBCL.

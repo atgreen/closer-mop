@@ -21,6 +21,7 @@
      (:file "closer-clozure"   :if-feature :clozure)
      (:file "closer-cmu"       :if-feature :cmu)
      (:file "closer-ecl"       :if-feature :ecl)
+     (:file "closer-egcl"      :if-feature :egcl)
      (:file "closer-lispworks" :if-feature :lispworks)
      (:file "closer-mcl"       :if-feature :mcl)
      (:file "closer-mezzano"   :if-feature :mezzano)

@@ -19,7 +19,7 @@
   #+(and lispworks (not (or lispworks4 lispworks5)))
   (:import-from #:hcl #:with-hash-table-locked)
 
-  #-(or clisp scl mezzano sicl)
+  #-(or clisp scl mezzano sicl egcl)
   (:import-from
    #+abcl      #:ext
    #+allegro   #:excl
@@ -33,6 +33,7 @@
 
    #:classp)
 
+  #-egcl
   (:import-from
    #+abcl      #:mop
    #+allegro   #:mop
