@@ -33,6 +33,40 @@
 
    #:classp)
 
+  ;; EGCL-MOP is EGCL's own metaobject protocol package. Import what it
+  ;; provides, so each c2mop: name IS the implementation's function.
+  #+egcl
+  (:import-from #:egcl-mop
+   #:forward-referenced-class
+
+   #:class-direct-slots
+   #:class-direct-subclasses
+   #:class-direct-superclasses
+   #:class-finalized-p
+   #:class-precedence-list
+   #:class-slots
+   #:compute-applicable-methods-using-classes
+   #:eql-specializer-object
+   #:finalize-inheritance
+   #:generic-function-argument-precedence-order
+   #:generic-function-lambda-list
+   #:generic-function-methods
+   #:generic-function-name
+   #:intern-eql-specializer
+   #:method-generic-function
+   #:method-lambda-list
+   #:method-specializers
+   #:slot-definition-allocation
+   #:slot-definition-initargs
+   #:slot-definition-initform
+   #:slot-definition-name
+   #:slot-definition-readers
+   #:slot-definition-type
+   #:slot-definition-writers
+   #:specializer-direct-generic-functions
+   #:specializer-direct-methods
+   #:validate-superclass)
+
   #-egcl
   (:import-from
    #+abcl      #:mop
