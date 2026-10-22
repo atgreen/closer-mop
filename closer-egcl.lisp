@@ -8,7 +8,10 @@
 ;; imported from EGCL-MOP in closer-mop-packages.lisp, so those c2mop: names are
 ;; EGCL's own functions. EGCL accepts class designators where AMOP takes class
 ;; metaobjects, and spells an EQL specializer as the list (EQL object), which
-;; INTERN-EQL-SPECIALIZER and METHOD-SPECIALIZERS agree on.
+;; INTERN-EQL-SPECIALIZER and METHOD-SPECIALIZERS agree on. METHOD-FUNCTION
+;; answers AMOP's function of (ARGS NEXT-METHODS), whose CALL-NEXT-METHOD runs
+;; NEXT-METHODS in turn; GENERIC-FUNCTION-METHOD-COMBINATION answers a
+;; method-combination metaobject EQ to FIND-METHOD-COMBINATION's.
 
 (defun classp (thing)
   (typep thing 'class))

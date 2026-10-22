@@ -48,11 +48,16 @@
    #:compute-applicable-methods-using-classes
    #:eql-specializer-object
    #:finalize-inheritance
+   #:find-method-combination
    #:generic-function-argument-precedence-order
+   #:generic-function-declarations
    #:generic-function-lambda-list
+   #:generic-function-method-class
+   #:generic-function-method-combination
    #:generic-function-methods
    #:generic-function-name
    #:intern-eql-specializer
+   #:method-function
    #:method-generic-function
    #:method-lambda-list
    #:method-specializers
